@@ -16,7 +16,7 @@ Field '_queryCompiler' defined on type 'Microsoft.EntityFrameworkCore.Query.Inte
 
 ## Problem insights
 
-`EntityFramework.Plus` is using reflection to get `_queryCompiler` field from `Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider` class. However, the presence of `_queryCompiler` is not guaranteed by the `IQueryable` interface.
+`EntityFramework.Plus` is using reflection to get `_queryCompiler` field from `Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider` class. However, the presence of `_queryCompiler` is not guaranteed by the `IQueryable` interface, especially in mock scenarios such as `new List<T>().AsQueryable()`.
 
 ## Solution
 
