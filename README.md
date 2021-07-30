@@ -2,7 +2,7 @@
 
 ## Problem description
 
-When using `Z.EntityFramework.Plus.EFCore` alongside `MockQueryable.Moq`, or even any `AsQueryable` other than `EntityFramework`, you get an exception:
+When using `Z.EntityFramework.Plus.EFCore` alongside `MockQueryable.Moq`, or even any `IQueryable` other than EntityFrameworks `EntityQueryProvider`, you get an exception:
 
 ```c#
 Field '_queryCompiler' defined on type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider' is not a field on the target object which is of type 'MockQueryable.EntityFrameworkCore.TestAsyncEnumerableEfCore`1[EntityFramework.Plus.Moq.Entity]'.
